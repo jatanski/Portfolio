@@ -104,6 +104,13 @@ li a {
         display: none;
     }
 
+    .ulContainer {
+        position: fixed;
+        height: 13vh;
+        width: 100%;
+        z-index: 1;
+    }
+
     nav.desktop ul {
         display: flex;
         justify-content: space-between;
@@ -141,6 +148,28 @@ li a {
 
     li a:hover::after {
         left: -3px;
+    }
+}
+
+.menuOpacity {
+    background-color: rgba(0, 0, 0, 0.95);
+    /* border-bottom: 1px solid red; */
+}
+
+.menuOpacity::after {
+    content: "";
+    position: absolute;
+    left: -100vw;
+    bottom: 0;
+    height: 2px;
+    width: 100vw;
+    background-color: red;
+    animation: showLine 1s both;
+}
+
+@keyframes showLine {
+    100% {
+        left: 0;
     }
 }
 

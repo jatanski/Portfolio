@@ -7,36 +7,128 @@
 .image {
     min-height: 60vh;
     width: 100vw;
-    background-image: url(img/profilowe.jpg);
+    background-image: url(img/Zdjęcie\ na\ strone.jpg);
     background-size: cover;
+    background-position: top 20%;
 }
 
 .description {
     position: relative;
-    left: 10vw;
+    left: 6vw;
     text-align: center;
-    width: 85vw;
+    width: 88vw;
     color: #eee;
     letter-spacing: 1px;
 }
 
-.description h2 {
+.description h2,
+.description h3 {
     position: relative;
-    padding: 5%;
+    padding: 15vh 5% 0;
+    text-transform: uppercase;
 }
 
-.description h2::after {
+.description h3 {
+    padding: 10vh 5% 0
+}
+
+.description h2::after,
+.description h3::after {
     content: "";
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-    bottom: 0;
+    bottom: -10%;
     height: 2px;
     width: 100px;
-    background-color: black;
+    background-color: white;
 }
 
 .description p {
-    padding: 5%;
+    padding: 10% 5%;
     line-height: 150%;
+}
+
+@media (orientation: portrait) and (min-width: 360px) {
+    .description h2 {
+        font-size: 1.8em;
+    }
+
+    .description h3 {
+        font-size: 1.6em;
+    }
+
+    .description p,
+    .description em {
+        font-size: 1.2em;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+    .description h2 {
+        font-size: 2.6em;
+        padding: 10vh 5% 0;
+    }
+
+    .description h3 {
+        font-size: 2.4em;
+    }
+
+    .description p,
+    .description em {
+        font-size: 2em;
+    }
+}
+
+@media (orientation: landscape) {
+    .image {
+        position: relative;
+        left: 5vw;
+        min-height: 90vh;
+        width: 90vw;
+    }
+
+    .description {
+        width: 92%;
+        left: 4vw;
+    }
+
+    .description p {
+        padding: 10% 5% 5%;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+    .description h2 {
+        font-size: 1.8em;
+    }
+
+    .description h3 {
+        font-size: 1.6em;
+    }
+
+    .description p,
+    .description em {
+        font-size: 1.3em;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+    .about {
+        display: flex;
+        width: 100%;
+    }
+
+    .image {
+        position: static;
+        width: 50%;
+
+    }
+
+    .description {
+        position: static;
+        width: 50%;
+    }
+
+
 }
