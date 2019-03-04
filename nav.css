@@ -1,0 +1,152 @@
+/* Nawigacja */
+
+.logo {
+    position: absolute;
+    top: 3vh;
+    left: 3%;
+    width: 30vh;
+    height: 8vh;
+    line-height: 8vh;
+    text-align: center;
+    z-index: 1;
+}
+
+nav .ico {
+    position: fixed;
+    top: 1vh;
+    right: 3vh;
+    font-size: 2.4em;
+    color: #eee;
+    z-index: 1;
+}
+
+nav {
+    background-color: #111;
+}
+
+.show {
+    display: none;
+}
+
+nav ul {
+    padding: 25% 0 10%;
+    border-bottom: 2px solid red;
+}
+
+nav li {
+    text-align: center;
+}
+
+li a {
+    height: 100%;
+    width: 100%;
+    line-height: calc(12vh * 0.8);
+    text-decoration: none;
+    /* background-color: grey; */
+    color: #fff;
+    letter-spacing: 3px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    transition: .1s;
+}
+
+@media (orientation: portrait) and (min-width: 375px) {
+    nav .ico {
+        font-size: 2.8em;
+    }
+
+    li a {
+        font-size: 1.6em;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+    nav .ico {
+        font-size: 4.5em;
+    }
+
+    li a {
+        font-size: 2.2em;
+    }
+}
+
+@media (orientation: landscape) {
+    nav ul {
+        padding: 14% 0 6%;
+    }
+
+    nav li {
+        padding: 1vh 0;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+    nav ul {
+        padding: 12% 0 6%;
+    }
+
+    nav .ico {
+        font-size: 2.8em;
+    }
+
+    li a {
+        font-size: 1.6em;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+
+    .show {
+        display: block;
+    }
+
+    .ico {
+        display: none;
+    }
+
+    nav.desktop ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: absolute;
+        top: 0;
+        right: 3vw;
+        max-width: 80vw;
+        min-width: 55vw;
+        padding: 1vh 0;
+        border: none;
+        z-index: 1;
+    }
+
+    li {
+        overflow: hidden;
+    }
+
+    li a {
+        position: relative;
+        font-size: 1.2em;
+        padding-bottom: 5px;
+    }
+
+    li a::after {
+        content: "";
+        position: absolute;
+        left: -150px;
+        bottom: 0;
+        height: 1px;
+        width: 100%;
+        background-color: red;
+        transition: .2s;
+    }
+
+    li a:hover::after {
+        left: -3px;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1440px) {
+    nav.desktop ul {
+        max-width: 45vw;
+        min-width: 45vw;
+    }
+}

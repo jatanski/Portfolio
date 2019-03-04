@@ -1,0 +1,257 @@
+/* Header */
+
+header {
+    position: relative;
+    min-height: 90vh;
+    background-color: #111;
+    color: #eee;
+    overflow: hidden;
+}
+
+header .title {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    width: 80vw;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+}
+
+header p {
+    font-size: 1.6em;
+    margin-bottom: 5vh;
+    font-weight: 700;
+}
+
+header h1 {
+    font-weight: normal;
+    font-size: 1.2em;
+    line-height: 160%;
+}
+
+.square {
+    position: absolute;
+    height: 12vh;
+    width: 12vh;
+    border: 2px solid #e4251c;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.one {
+    top: -200vh;
+    left: -200vh;
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: entrySquareLeftTop 2s ease-out both,
+        /* CircleToSquare 1s 2s both, */
+        increase 1s 2s ease-in both,
+        rotateSquareOne 1s 3.2s ease-in-out both, rotateInfiniteOne 8s 4.4s linear infinite;
+}
+
+.two {
+    top: -200vh;
+    right: -200vh;
+    transform: translate(50%, -50%) rotate(0deg);
+    animation: entrySquareRightTop 2s ease-out both,
+        increase 1s 2s ease-in both,
+        rotateSquareTwo 1s 3.2s ease-in-out both,
+        rotateInfiniteTwo 8s 4.4s linear infinite;
+}
+
+.three {
+    bottom: -200vh;
+    right: -200vh;
+    transform: translate(50%, 50%) rotate(0deg);
+    animation: entrySquareRightBottom 2s ease-out both,
+        increase 1s 2s ease-in both,
+        rotateSquareThree 1s 3.2s ease-in-out both,
+        rotateInfiniteThree 8s 4.4s linear infinite;
+}
+
+.four {
+    bottom: -200vh;
+    left: -200vh;
+    transform: translate(-50%, 50%) rotate(0deg);
+    animation: entrySquareLeftBottom 2s ease-out both,
+        increase 1s 2s ease-in both,
+        rotateSquareFour 1s 3.2s ease-in-out both,
+        rotateInfiniteFour 8s 4.4s linear infinite;
+}
+
+@keyframes entrySquareLeftTop {
+
+    100% {
+        top: 50%;
+        left: 50%;
+    }
+}
+
+@keyframes entrySquareRightTop {
+
+    100% {
+        top: 50%;
+        right: 50%;
+    }
+}
+
+@keyframes entrySquareRightBottom {
+
+    100% {
+        right: 50%;
+        bottom: 50%;
+    }
+}
+
+@keyframes entrySquareLeftBottom {
+
+    100% {
+        left: 50%;
+        bottom: 50%;
+    }
+}
+
+@keyframes increase {
+    100% {
+        border-radius: 20%;
+        height: 44vh;
+        width: 44vh
+    }
+}
+
+@keyframes rotateSquareOne {
+    100% {
+        transform: translate(-50%, -50%) rotate(427.5deg)
+    }
+}
+
+@keyframes rotateSquareTwo {
+    100% {
+        transform: translate(50%, -50%) rotate(202.5deg)
+    }
+}
+
+@keyframes rotateSquareThree {
+    100% {
+        transform: translate(50%, 50%) rotate(315deg)
+    }
+}
+
+@keyframes rotateSquareFour {
+    100% {
+        transform: translate(-50%, 50%) rotate(360deg)
+    }
+}
+
+@keyframes rotateInfiniteOne {
+    0% {
+        transform: translate(-50%, -50%) rotate(427.5deg)
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(787.5deg)
+    }
+}
+
+@keyframes rotateInfiniteTwo {
+    0% {
+        transform: translate(50%, -50%) rotate(202.5deg)
+    }
+
+    100% {
+        transform: translate(50%, -50%) rotate(562.5deg)
+    }
+}
+
+@keyframes rotateInfiniteThree {
+    0% {
+        transform: translate(50%, 50%) rotate(315deg)
+    }
+
+    100% {
+        transform: translate(50%, 50%) rotate(675deg)
+    }
+}
+
+@keyframes rotateInfiniteFour {
+    0% {
+        transform: translate(-50%, 50%) rotate(360deg)
+    }
+
+    100% {
+        transform: translate(-50%, 50%) rotate(720deg)
+    }
+}
+
+@media (orientation: portrait) and (min-width: 375px) {
+    header p {
+        font-size: 1.9em;
+
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+    header p {
+        font-size: 2.4em;
+
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+    header p {
+        font-size: 1.8em;
+    }
+
+    header h1 {
+        font-size: 1.4em;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+    header p {
+        font-size: 2em;
+    }
+
+    header h1 {
+        font-size: 1.6em;
+    }
+
+    @keyframes increase {
+        100% {
+            border-radius: 20%;
+            height: 60vh;
+            width: 60vh
+        }
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1440px) {
+    header p {
+        font-size: 2.6em;
+    }
+
+    header h1 {
+        font-size: 2em;
+
+    }
+
+    header .title {
+        max-width: 65vw;
+    }
+}
+
+/* Umiejętności */
+
+.skills {
+    min-height: 80vh;
+}

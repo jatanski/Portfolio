@@ -1,0 +1,42 @@
+/* O mnie */
+
+.about {
+    min-height: 80vh;
+}
+
+.image {
+    min-height: 60vh;
+    width: 100vw;
+    background-image: url(img/profilowe.jpg);
+    background-size: cover;
+}
+
+.description {
+    position: relative;
+    left: 10vw;
+    text-align: center;
+    width: 85vw;
+    color: #eee;
+    letter-spacing: 1px;
+}
+
+.description h2 {
+    position: relative;
+    padding: 5%;
+}
+
+.description h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 0;
+    height: 2px;
+    width: 100px;
+    background-color: black;
+}
+
+.description p {
+    padding: 5%;
+    line-height: 150%;
+}
