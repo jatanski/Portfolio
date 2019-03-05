@@ -115,7 +115,7 @@
     }
 }
 
-@media (orientation: portrait) and (min-width: 768px) {
+@media (orientation: portrait) and (min-width: 1024px) {
 
     .skills h2,
     .skills h3 {

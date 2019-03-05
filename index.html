@@ -21,7 +21,7 @@
 </head>
 
 <body>
-  <div class="wrap">
+  <div onselectstart="window.event.returnValue=false;" class="wrap">
     <nav class="desktop">
       <div class="logo"><img src="img/logo.svg" alt=""></div>
       <div class="ico burger"><i class="fas fa-bars"></i></div>
@@ -105,7 +105,84 @@
         </div>
 
       </section>
-      <section id="portfolio" class="portfolio"></section>
+      <section id="portfolio" class="portfolio">
+        <h2>Projects</h2>
+        <div class="projects">
+          <div class="project card">
+            <div class="photo">
+              <div class="links">
+                <div class="github"><a href="" target="_blank"><i class="fas fa-code"></i></a> </div>
+                <div class="link"> <a href="" target="_blank" ><i class="fas fa-search"></i></a></div>
+              </div>
+            </div>
+            <div class="short-description">
+              <h3>Portfolio</h3>
+              <p>Własna wizytówka jako typowa strona Ona-page</p>
+            </div>
+          </div>
+          <div class="project calc">
+            <div class="photo">
+              <div class="links">
+                <div class="github"><a href="" target="_blank"><i class="fas fa-code"></i></a> </div>
+                <div class="link"> <a href="" target="_blank" ><i class="fas fa-search"></i></a></div>
+              </div>
+
+            </div>
+            <div class="short-description">
+              <h3>Kalkulator</h3>
+              <p>Kalkulator napisany w JavaScripcie przy użyciu obiektów</p>
+            </div>
+          </div>
+          <div class="project draw">
+            <div class="photo">
+              <div class="links">
+                <div class="github"><a href="" target="_blank"><i class="fas fa-code"></i></a> </div>
+                <div class="link"> <a href="" target="_blank" ><i class="fas fa-search"></i></a></div>
+              </div>
+            </div>
+            <div class="short-description">
+              <h3>Gra w losowanie</h3>
+              <p>Prosta gra napisana w JavaScripcie</p>
+            </div>
+
+          </div>
+          <div class="project in-progres">
+            <div class="photo">
+              <div class="links">
+                <div class="github"><a href="" target="_blank"><i class="fas fa-code"></i></a> </div>
+                <div class="link"> <a href="" target="_blank" ><i class="fas fa-search"></i></a></div>
+              </div>
+            </div>
+            <div class="short-description">
+              <h3>In progress...</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+
+          </div>
+          <!-- <div class="project in-progres">
+            <div class="photo"></div>
+            <div class="short-description">
+              <h3>In progress...</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="links">
+              <div class="github"><a href="" target="_blank"><i class="fas fa-code"></i></a> </div>
+              <div class="link"> <a href="" target="_blank" ><i class="fas fa-search"></i></a></div>
+            </div>
+          </div> -->
+          <!-- <div class="project in-progres">
+            <div class="photo"></div>
+            <div class="short-description">
+              <h3>In progress...</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="links">
+              <div class="github"><a href="" target="_blank"><i class="fas fa-code"></i></a> </div>
+              <div class="link"> <a href="" target="_blank" ><i class="fas fa-search"></i></a></div>
+            </div>
+          </div> -->
+        </div>
+      </section>
       <section id="contact" class="contact">
         <h2>Contact</h2>
         <div class="socials">

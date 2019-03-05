@@ -2,5 +2,226 @@
 
 .portfolio {
     min-height: 80vh;
-    background-color: orange;
+    background-color: #e4251c;
+}
+
+.portfolio h2 {
+    position: relative;
+    padding: 6% 0 14%;
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.portfolio h3 {
+    position: relative;
+    padding: 4% 0;
+    font-size: 1.4em;
+    text-align: center;
+    color: #111;
+}
+
+.portfolio p {
+    display: none;
+}
+
+.portfolio i {
+    padding: 2vh 0 10vh;
+    font-size: 2.4em;
+    color: #fff;
+}
+
+.photo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    background-image: url(img/portfolio_ekran.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 45vh;
+}
+
+.calc .photo {
+    background-image: url(img/calc_monitor.png);
+}
+
+.draw .photo {
+    background-image: url(img/draw_monitor.png);
+}
+
+.in-progres .photo {
+    background-image: url(img/in-progres_monitor.png);
+}
+
+.calc i,
+.draw i,
+.in-progres i {
+    color: #555;
+}
+
+.links {
+    position: relative;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (orientation: portrait) and (min-width: 360px) {
+    .portfolio h2 {
+        font-size: 2.6em;
+    }
+
+    .portfolio h3 {
+        font-size: 2em;
+    }
+
+    .portfolio i {
+        font-size: 3em;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 410px) {
+    .portfolio h2 {
+        font-size: 2.8em;
+    }
+
+    .portfolio h3 {
+        font-size: 2.2em;
+    }
+
+    .portfolio i {
+        font-size: 3.3em;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+    .portfolio h2 {
+        font-size: 4.6em;
+    }
+
+    .portfolio h3 {
+        font-size: 3.6em;
+    }
+
+    .portfolio i {
+        font-size: 5.4em;
+    }
+
+    .photo {
+        height: 55vh;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 1024px) {
+    .portfolio h2 {
+        font-size: 5em;
+    }
+
+    .portfolio h3 {
+        font-size: 4.2em;
+    }
+
+    .portfolio i {
+        font-size: 6.6em;
+    }
+}
+
+@media (orientation: landscape) {
+    .project {
+        padding-bottom: 15vh;
+    }
+
+    .portfolio h2 {
+        font-size: 2.6em;
+    }
+
+    .portfolio h3 {
+        font-size: 2.2em;
+    }
+
+    .portfolio i {
+        font-size: 2.8em;
+    }
+
+    .photo {
+        height: 120vh;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+    .portfolio h2 {
+        font-size: 2.8em;
+    }
+
+    .portfolio h3 {
+        font-size: 2.4em;
+    }
+
+    .portfolio i {
+        font-size: 3em;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+
+    .portfolio h2 {
+        padding: 6% 0 6%;
+        font-size: 3em;
+    }
+
+    .projects {
+        padding: 5vh 0;
+        min-height: 90vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        background-color: rebeccapurple;
+    }
+
+    .project {
+        height: 33vh;
+        width: 40%;
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 0;
+        background-color: red;
+    }
+
+    .photo {
+        height: 33vh;
+        background-size: contain;
+        width: 20vw;
+    }
+
+    .portfolio i {
+        padding: 5% 0 50%;
+        font-size: 2.6em;
+
+    }
+
+    .short-description {
+        width: 20vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .portfolio h3 {
+        font-size: 2em;
+    }
+
+    .portfolio p {
+        padding: 5vh 5%;
+        display: block;
+        text-align: center;
+        font-size: 1.3em;
+    }
+
+
+
+
 }

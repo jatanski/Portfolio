@@ -23,8 +23,8 @@ icoClose.addEventListener('click', function () {
 })
 
 window.addEventListener('scroll', function () {
-    console.log(this.scrollY)
-    console.log(header.offsetHeight)
+    // console.log(this.scrollY)
+    // console.log(header.offsetHeight)
     if (this.scrollY > header.offsetHeight - ulContainer.offsetHeight) {
         ulContainer.classList.add('menuOpacity');
     } else {

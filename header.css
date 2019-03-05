@@ -48,7 +48,7 @@ header h1 {
     animation: entrySquareLeftTop 2s ease-out both,
         /* CircleToSquare 1s 2s both, */
         increase 1s 2s ease-in both,
-        rotateSquareOne 1s 3.2s ease-in-out both, rotateInfiniteOne 8s 4.4s linear infinite;
+        rotateSquareOne 1s 3.2s ease-in-out both, rotateInfiniteOne 10s 4.2s linear infinite;
 }
 
 .two {
@@ -58,7 +58,7 @@ header h1 {
     animation: entrySquareRightTop 2s ease-out both,
         increase 1s 2s ease-in both,
         rotateSquareTwo 1s 3.2s ease-in-out both,
-        rotateInfiniteTwo 8s 4.4s linear infinite;
+        rotateInfiniteTwo 10s 4.2s linear infinite;
 }
 
 .three {
@@ -68,7 +68,7 @@ header h1 {
     animation: entrySquareRightBottom 2s ease-out both,
         increase 1s 2s ease-in both,
         rotateSquareThree 1s 3.2s ease-in-out both,
-        rotateInfiniteThree 8s 4.4s linear infinite;
+        rotateInfiniteThree 10s 4.2s linear infinite;
 }
 
 .four {
@@ -78,7 +78,7 @@ header h1 {
     animation: entrySquareLeftBottom 2s ease-out both,
         increase 1s 2s ease-in both,
         rotateSquareFour 1s 3.2s ease-in-out both,
-        rotateInfiniteFour 8s 4.4s linear infinite;
+        rotateInfiniteFour 10s 4.2s linear infinite;
 }
 
 @keyframes entrySquareLeftTop {
