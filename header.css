@@ -249,9 +249,3 @@ header h1 {
         max-width: 65vw;
     }
 }
-
-/* Umiejętności */
-
-.skills {
-    min-height: 80vh;
-}

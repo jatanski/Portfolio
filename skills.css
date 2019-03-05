@@ -1,0 +1,186 @@
+/* Moje umiejętności */
+
+.skills {
+    background-color: #fff;
+    color: #111;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.skills h2,
+.skills h3 {
+    padding: 8% 0 12%;
+    font-size: 2em;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.icon {
+    min-width: calc(100% / 3);
+    padding-bottom: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.icon i {
+    font-size: 3em;
+}
+
+.progres {
+    display: none;
+    position: relative;
+    margin-left: 5%;
+    height: 4vh;
+    width: 20vw;
+    border: 5px solid #222;
+    overflow: hidden;
+}
+
+.progres::after {
+    content: "";
+    position: absolute;
+    left: -30vw;
+    bottom: -5px;
+    height: 4vh;
+    background-color: #222;
+    background-size: 4px;
+    animation: progresLoading 2s 2s both;
+}
+
+.fa-html5+.progres::after {
+    width: calc(20vw * 4/5 - 5px);
+}
+
+.fa-css3-alt+.progres::after {
+    width: calc(20vw * 7/10 - 5px);
+}
+
+.fa-js+.progres::after,
+.devicon-jquery-plain+.progres::after,
+.devicon-git-plain+.progres::after {
+    width: calc(20vw * 1/2 - 5px);
+}
+
+.devicon-bootstrap-plain+.progres::after {
+    width: calc(20vw * 2/3 - 5px);
+}
+
+.devicon-sass-original+.progres::after {
+    width: calc(20vw * 55/100 - 5px);
+}
+
+.devicon-photoshop-plain+.progres::after {
+    width: calc(20vw * 4/10 - 5px);
+}
+
+@keyframes progresLoading {
+    100% {
+        left: -5px;
+    }
+}
+
+.icon span {
+    display: none;
+    padding-left: 15px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+@media (orientation: portrait) and (min-width: 400px) {
+
+    .skills h2,
+    .skills h3 {
+        font-size: 2.6em;
+    }
+
+    .icon i {
+        font-size: 4.2em;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+
+    .skills h2,
+    .skills h3 {
+        font-size: 4em;
+    }
+
+    .icon i {
+        font-size: 6.6em;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+
+    .skills h2,
+    .skills h3 {
+        font-size: 5em;
+    }
+
+    .icon i {
+        font-size: 8em;
+    }
+}
+
+@media (orientation: landscape) {
+
+    .skills h2,
+    .skills h3 {
+        font-size: 2.4em;
+    }
+
+    .icon i {
+        font-size: 4em;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+
+    .skills h2,
+    .skills h3 {
+        font-size: 3em;
+        padding: 8% 0;
+    }
+
+    .icon {
+        min-width: calc(100% / 2);
+    }
+
+    .second>.icon {
+        min-width: calc(100% / 3);
+    }
+
+    .icon i {
+        font-size: 4em;
+    }
+
+    .icon span {
+        display: block;
+    }
+
+    .progres {
+        display: block;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1400px) {
+
+    .skills h2,
+    .skills h3 {
+        font-size: 4.6em;
+        padding: 7% 0;
+    }
+
+    .icon i {
+        font-size: 5em;
+    }
+
+    .icon span {
+        font-size: 2.8em;
+    }
+}

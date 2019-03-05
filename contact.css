@@ -1,0 +1,128 @@
+/* Kontakt i social media */
+
+.contact {
+    min-height: 60vh;
+}
+
+.contact h2 {
+    padding: 8% 0 12%;
+    font-size: 2em;
+    color: #eee;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.social {
+    padding: 6vw 0;
+    text-align: center;
+    flex-basis: 33%;
+}
+
+.social i {
+    font-size: 3em;
+    color: #eee;
+}
+
+.fa-mobile-alt,
+.fa-envelope {
+    padding-bottom: 3vh;
+}
+
+.contact span {
+    display: none;
+    color: #eee;
+    transition: .5s
+}
+
+span.showNumber {
+    display: block;
+}
+
+.fa-mobile-alt,
+.fa-envelope {
+    cursor: pointer;
+}
+
+@media (orientation: portrait) and (min-width: 360px) {
+    .contact h2 {
+        font-size: 2.2em
+    }
+
+    .social i {
+        font-size: 3.4em;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 400px) {
+    .contact h2 {
+        font-size: 2.6em
+    }
+
+    .social i {
+        font-size: 3.8em;
+    }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+    .contact h2 {
+        padding: 8% 0;
+        font-size: 5em;
+    }
+
+    .social i {
+        font-size: 7em;
+    }
+}
+
+@media (orientation: landscape) {
+
+    .contact h2 {
+        padding: 8% 0;
+        font-size: 2.4em
+    }
+
+    .social i {
+        font-size: 3.4em;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+    .contact h2 {
+        font-size: 2.8em;
+    }
+
+    .social i {
+        font-size: 3.8em;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+    .contact h2 {
+        font-size: 3em;
+    }
+
+    .socials {
+        flex-wrap: nowrap;
+    }
+
+    .social i {
+        font-size: 4em;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1400px) {
+    .contact h2 {
+        padding: 6% 0 2%;
+        font-size: 4.4em;
+    }
+
+    .social i {
+        font-size: 5em;
+    }
+}

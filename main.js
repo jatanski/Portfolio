@@ -1,8 +1,12 @@
 const icoBurger = document.querySelector('.burger');
 const icoClose = document.querySelector('.close');
 const mobileUl = document.querySelector('ul');
-const ulContainer = document.querySelector('.ulContainer')
-const header = document.querySelector('header')
+const ulContainer = document.querySelector('.ulContainer');
+const header = document.querySelector('header');
+const phone = document.querySelector('.fa-mobile-alt');
+const phoneNumber = document.querySelector('.number');
+const mail = document.querySelector('.fa-envelope');
+const showMail = document.querySelector('.mail')
 
 icoBurger.addEventListener('click', function () {
     this.classList.add('show');
@@ -26,6 +30,11 @@ window.addEventListener('scroll', function () {
     } else {
         ulContainer.classList.remove('menuOpacity');
     }
+})
+phone.addEventListener('click', function () {
+    phoneNumber.classList.toggle('showNumber');
+})
 
-
+mail.addEventListener('click', function () {
+    showMail.classList.toggle('showNumber');
 })
