@@ -28,10 +28,13 @@ body {
     opacity: 1;
 }
 
-.myskills,
-.inprogres,
-.projects,
-.about {
-    max-width: 1600px;
-    margin: 0 auto;
+@media (min-width: 1024px) {
+
+    .myskills,
+    .inprogres,
+    .projects,
+    .about {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
 }
