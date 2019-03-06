@@ -7,37 +7,39 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Jakub Tański - Web Developer</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&amp;subset=latin-ext" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="nav.css">
-  <link rel="stylesheet" href="header.css">
-  <link rel="stylesheet" href="about.css">
-  <link rel="stylesheet" href="skills.css">
-  <link rel="stylesheet" href="portfolio.css">
-  <link rel="stylesheet" href="contact.css">
-  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="css/animate.css" type="text/css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/skills.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/footer.css">
 </head>
 
 <body>
   <div onselectstart="window.event.returnValue=false;" class="wrap">
     <nav class="desktop">
-      <div class="logo"><img src="img/logo.svg" alt=""></div>
+      <div class="logo"></div>
       <div class="ico burger"><i class="fas fa-bars"></i></div>
       <div class="ico close show"><i class="far fa-times-circle"></i></div>
       <div class="ulContainer">
         <ul class="show">
-          <li class="main"><a class="menuButton" href="#">Main</a></li>
+          <li class="main"><a class="menuButton" href="#header">Main</a></li>
           <li><a class="menuButton" href="#about">About</a></li>
           <li><a class="menuButton"href="#skills">Skills</a></li>
           <li><a class="menuButton"href="#portfolio">Portfolio</a></li>
-          <li class="contact"><a href="#contact">Contact</a></li>
+          <li class="menu-contact"><a href="#contact">Contact</a></li>
         </ul>
       </div>
 
     </nav>
-    <header>
+    <header id="header">
       <div class="title">
         <span class="square one"></span>
         <span class="square two"></span>
@@ -50,65 +52,70 @@
     </header>
     <main>
       <section id="about" class="about">
-        <div class="image"></div>
+        <div class="image" data-animate="fadeIn"></div>
         <div class="description">
-          <h2>About me</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui et molestias necessitatibus, quod
+          <h2 data-animate="fadeIn">About me</h2>
+          <p data-animate="fadeIn">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui et molestias
+            necessitatibus,
+            quod
             nesciunt,
             eos eum nostrum quo quae deserunt exercitationem ut architecto vel tenetur blanditiis facere voluptates
             magni animi.</p>
-          <h3>My live motto</h3>
-          <p class="motto">"Wolę wybrać niebezpieczną wolność niż bezpieczną niewolę."</p>
-          <em>Jacek Walkiewicz</em>
+          <h3 data-animate="fadeIn">My live motto</h3>
+          <p class="motto" data-animate="fadeIn">"Wolę wybrać niebezpieczną wolność niż bezpieczną niewolę."</p>
+          <em data-animate="fadeIn">Jacek Walkiewicz</em>
         </div>
       </section>
       <section id="skills" class="skills">
-        <h2>My skills</h2>
-        <div class="icons">
-          <div class="icon"><i class="fab fa-html5"></i>
-            <div class="progres"></div><span>80%</span>
-          </div>
-          <div class="icon"><i class="fab fa-css3-alt"></i>
-            <div class="progres"></div><span>70%</span>
-          </div>
-          <div class="icon"><i class="fab fa-js"></i>
-            <div class="progres"></div><span>50%</span>
-          </div>
-          <div class="icon"><i class="devicon-bootstrap-plain"></i>
-            <div class="progres"></div><span>65%</span>
-          </div>
-          <div class="icon"><i class="devicon-jquery-plain"></i>
-            <div class="progres"></div><span>50%</span>
-          </div>
-          <div class="icon"><i class="devicon-sass-original"></i>
-            <div class="progres"></div><span>55%</span>
-          </div>
-          <div class="icon"><i class="devicon-git-plain"></i>
-            <div class="progres"></div><span>50%</span>
-          </div>
-          <div class="icon"><i class="devicon-photoshop-plain"></i>
-            <div class="progres"></div><span>40%</span>
-          </div>
-        </div>
-        <h3>In progres...</h3>
-        <div class="icons second">
-          <div class="icon"><i class="fab fa-react"></i>
-          </div>
-          <div class="icon"><i class="fab fa-node-js"></i>
-          </div>
-          <div class="icon"><i class="devicon-mongodb-plain-wordmark"></i>
-          </div>
-          <div class="icon"><i class="devicon-express-original"></i>
-          </div>
-          <div class="icon"><i class="devicon-typescript-plain"></i>
+        <div class="myskills" data-animate="fadeIn">
+          <h2>My skills</h2>
+          <div class="icons">
+            <div class="icon html5"><i class="fab fa-html5"></i>
+              <div class="progres"><span class="show-loading"></span></div><span>80%</span>
+            </div>
+            <div class="icon css3"><i class="fab fa-css3-alt"></i>
+              <div class="progres"><span class="show-loading"></span></div><span>70%</span>
+            </div>
+            <div class="icon js"><i class="fab fa-js"></i>
+              <div class="progres"><span class="show-loading"></span></div><span>50%</span>
+            </div>
+            <div class="icon bootstrap"><i class="devicon-bootstrap-plain"></i>
+              <div class="progres"><span class="show-loading"></span></div><span>65%</span>
+            </div>
+            <div class="icon jquery"><i class="devicon-jquery-plain"></i>
+              <div class="progres"><span class="show-loading"></span></div><span>50%</span>
+            </div>
+            <div class="icon sass"><i class="devicon-sass-original"></i>
+              <div class="progres"><span class="show-loading"></span></div><span>55%</span>
+            </div>
+            <div class="icon git"><i class="devicon-git-plain"></i>
+              <div class="progres"><span class="show-loading"></span></div><span>50%</span>
+            </div>
+            <div class="icon photoshop"><i class="devicon-photoshop-plain"></i>
+              <div class="progres"><span class="show-loading"></span></div><span>40%</span>
+            </div>
           </div>
         </div>
-
+        <div class="inprogres" data-animate="fadeIn">
+          <h3>In progres...</h3>
+          <div class="icons second">
+            <div class="icon"><i class="fab fa-react"></i>
+            </div>
+            <div class="icon"><i class="fab fa-node-js"></i>
+            </div>
+            <div class="icon"><i class="devicon-mongodb-plain-wordmark"></i>
+            </div>
+            <div class="icon"><i class="devicon-express-original"></i>
+            </div>
+            <div class="icon"><i class="devicon-typescript-plain"></i>
+            </div>
+          </div>
+        </div>
       </section>
       <section id="portfolio" class="portfolio">
-        <h2>Projects</h2>
+        <h2 data-animate="fadeIn">Projects</h2>
         <div class="projects">
-          <div class="project card">
+          <div class="project card" data-animate="fadeIn">
             <div class="photo">
               <div class="links">
                 <div class="github"><a href="" target="_blank"><i class="fas fa-code"></i></a> </div>
@@ -120,20 +127,19 @@
               <p>Własna wizytówka jako typowa strona Ona-page</p>
             </div>
           </div>
-          <div class="project calc">
+          <div class="project calc" data-animate="fadeIn">
             <div class="photo">
               <div class="links">
                 <div class="github"><a href="" target="_blank"><i class="fas fa-code"></i></a> </div>
                 <div class="link"> <a href="" target="_blank" ><i class="fas fa-search"></i></a></div>
               </div>
-
             </div>
             <div class="short-description">
               <h3>Kalkulator</h3>
               <p>Kalkulator napisany w JavaScripcie przy użyciu obiektów</p>
             </div>
           </div>
-          <div class="project draw">
+          <div class="project draw" data-animate="fadeIn">
             <div class="photo">
               <div class="links">
                 <div class="github"><a href="" target="_blank"><i class="fas fa-code"></i></a> </div>
@@ -146,7 +152,7 @@
             </div>
 
           </div>
-          <div class="project in-progres">
+          <div class="project in-progres" data-animate="fadeIn">
             <div class="photo">
               <div class="links">
                 <div class="github"><a href="" target="_blank"><i class="fas fa-code"></i></a> </div>
@@ -159,31 +165,9 @@
             </div>
 
           </div>
-          <!-- <div class="project in-progres">
-            <div class="photo"></div>
-            <div class="short-description">
-              <h3>In progress...</h3>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            </div>
-            <div class="links">
-              <div class="github"><a href="" target="_blank"><i class="fas fa-code"></i></a> </div>
-              <div class="link"> <a href="" target="_blank" ><i class="fas fa-search"></i></a></div>
-            </div>
-          </div> -->
-          <!-- <div class="project in-progres">
-            <div class="photo"></div>
-            <div class="short-description">
-              <h3>In progress...</h3>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            </div>
-            <div class="links">
-              <div class="github"><a href="" target="_blank"><i class="fas fa-code"></i></a> </div>
-              <div class="link"> <a href="" target="_blank" ><i class="fas fa-search"></i></a></div>
-            </div>
-          </div> -->
         </div>
       </section>
-      <section id="contact" class="contact">
+      <section id="contact" data-animate="fadeIn" class="contact">
         <h2>Contact</h2>
         <div class="socials">
           <div class="social"><a href="https://www.facebook.com/ja.tanski"><i class="fab fa-facebook-square"></i></a></div>
@@ -195,9 +179,13 @@
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <p>&copy; 2019 Copyright | Jakub Tański </p>
+    </footer>
   </div>
-  <script src="main.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery.viewportchecker.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

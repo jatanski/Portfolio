@@ -5,9 +5,10 @@
     top: 3vh;
     left: 3%;
     width: 30vh;
-    height: 8vh;
-    line-height: 8vh;
-    text-align: center;
+    height: 5.5vh;
+    background-image: url(../img/pseudologo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
     z-index: 1;
 }
 
@@ -106,7 +107,7 @@ li a {
 
     .ulContainer {
         position: fixed;
-        height: 13vh;
+        height: 10vh;
         width: 100%;
         z-index: 1;
     }
@@ -120,13 +121,15 @@ li a {
         right: 3vw;
         max-width: 80vw;
         min-width: 55vw;
-        padding: 1vh 0;
+        padding: 0 0 2vh;
         border: none;
         z-index: 1;
+        height: 11vh;
     }
 
     li {
         overflow: hidden;
+        height: 11vh;
     }
 
     li a {

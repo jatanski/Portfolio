@@ -2,12 +2,17 @@
 
 .about {
     min-height: 80vh;
+    transition: .5s;
+}
+
+section.active {
+    display: none;
 }
 
 .image {
     min-height: 60vh;
     width: 100vw;
-    background-image: url(img/Zdjęcie\ na\ strone.jpg);
+    background-image: url(../img/Zdjęcie\ na\ strone.jpg);
     background-size: cover;
     background-position: top 20%;
 }
@@ -19,17 +24,19 @@
     width: 88vw;
     color: #eee;
     letter-spacing: 1px;
+    padding-bottom: 10vh;
 }
 
 .description h2,
 .description h3 {
     position: relative;
-    padding: 15vh 5% 0;
+    font-size: 2em;
+    padding: 10vh 5% 0;
     text-transform: uppercase;
 }
 
 .description h3 {
-    padding: 10vh 5% 0
+    font-size: 1.6em;
 }
 
 .description h2::after,
@@ -121,14 +128,12 @@
 
     .image {
         position: static;
+        background-position: center;
         width: 50%;
-
     }
 
     .description {
         position: static;
         width: 50%;
     }
-
-
 }

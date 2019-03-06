@@ -1,0 +1,36 @@
+footer {
+    padding: 4% 0;
+    border-top: 1px solid red;
+    text-align: center;
+    letter-spacing: 1px;
+    background-color: #333;
+    color: #fff;
+}
+
+@media (min-width: 360px) {
+    footer p {
+        font-size: 1.1em;
+    }
+}
+
+@media (min-width: 736px) {
+    footer p {
+        font-size: 1.4em;
+    }
+}
+
+@media (min-width: 768px) {
+    footer p {
+        font-size: 1.6em;
+    }
+}
+
+@media (min-width: 1024px) {
+    footer {
+        padding: 1.5%;
+    }
+
+    footer p {
+        font-size: 1.2em;
+    }
+}

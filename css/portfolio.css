@@ -2,23 +2,27 @@
 
 .portfolio {
     min-height: 80vh;
-    background-color: #e4251c;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 .portfolio h2 {
     position: relative;
-    padding: 6% 0 14%;
+    padding: 20% 0;
     font-size: 2em;
     text-align: center;
     text-transform: uppercase;
+    color: #eee;
 }
 
 .portfolio h3 {
     position: relative;
+    top: 50%;
+    transform: translateY(-50%);
     padding: 4% 0;
-    font-size: 1.4em;
     text-align: center;
-    color: #111;
+    font-size: 1.4em;
+    color: #ddd;
 }
 
 .portfolio p {
@@ -31,29 +35,45 @@
     color: #fff;
 }
 
+.projects {
+    width: 76%;
+    position: relative;
+    left: 12%;
+
+}
+
+.project {
+    padding-bottom: 20vh;
+}
+
 .photo {
+    width: 100%;
+    height: 45vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: #fff;
-    background-image: url(img/portfolio_ekran.png);
-    background-size: cover;
+    background-image: url(../img/portfolio_ekran.png);
+    background-size: 110%;
     background-repeat: no-repeat;
     background-position: center;
-    width: 100vw;
-    height: 45vh;
 }
 
 .calc .photo {
-    background-image: url(img/calc_monitor.png);
+    background-image: url(../img/calc_monitor.png);
 }
 
 .draw .photo {
-    background-image: url(img/draw_monitor.png);
+    background-image: url(../img/draw_monitor.png);
 }
 
 .in-progres .photo {
-    background-image: url(img/in-progres_monitor.png);
+    background-image: url(../img/in-progres_monitor.png);
+}
+
+.short-description {
+    height: 15vh;
+    background-color: #7A0308;
 }
 
 .calc i,
@@ -134,7 +154,12 @@
         padding-bottom: 15vh;
     }
 
+    .short-description {
+        height: 35vh;
+    }
+
     .portfolio h2 {
+        padding: 10% 0;
         font-size: 2.6em;
     }
 
@@ -147,7 +172,8 @@
     }
 
     .photo {
-        height: 120vh;
+        height: 90vh;
+        background-size: 90%;
     }
 }
 
@@ -165,63 +191,82 @@
     }
 }
 
-@media (orientation: landscape) and (min-width: 1024px) {
-
+@media (orientation: landscape) and (min-width: 640px) {
     .portfolio h2 {
-        padding: 6% 0 6%;
-        font-size: 3em;
+        font-size: 3.2em;
+    }
+
+    .portfolio h3 {
+        font-size: 2.6em;
+    }
+
+    .portfolio i {
+        font-size: 3.2em;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+    .portfolio h2 {
+        padding: 5% 0 0;
+        font-size: 3.2em;
+        letter-spacing: 3px;
     }
 
     .projects {
-        padding: 5vh 0;
+        left: 0;
+        width: 100%;
         min-height: 90vh;
+        padding: 2vh 0;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         align-content: space-around;
-        background-color: rebeccapurple;
     }
 
     .project {
         height: 33vh;
-        width: 40%;
+        width: 44%;
+        box-shadow: 0 0 2px 5px #7A0308;
         display: flex;
         justify-content: space-around;
         padding-bottom: 0;
-        background-color: red;
     }
 
     .photo {
+        width: 22vw;
         height: 33vh;
         background-size: contain;
-        width: 20vw;
+
     }
 
     .portfolio i {
         padding: 5% 0 50%;
         font-size: 2.6em;
-
     }
 
     .short-description {
-        width: 20vw;
+        height: 100%;
+        width: 22vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        letter-spacing: 1px;
     }
 
     .portfolio h3 {
+        top: 10%;
         font-size: 2em;
     }
 
-    .portfolio p {
-        padding: 5vh 5%;
-        display: block;
-        text-align: center;
-        font-size: 1.3em;
+    .draw h3 {
+        top: 20%;
     }
 
-
-
-
+    .portfolio p {
+        display: block;
+        padding: 5vh 5%;
+        text-align: center;
+        font-size: 1.3em;
+        color: #ddd;
+    }
 }

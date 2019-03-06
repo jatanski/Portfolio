@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Open Sans',
+        sans-serif;
+    font-family: 'Source Sans Pro',
+        sans-serif;
+}
+
+span {
+    font-family: 'Open Sans',
+        sans-serif;
+}
+
+body {
+    position: relative;
+    min-height: 200vh;
+    background: #111;
+}
+
+.hide {
+    opacity: 0
+}
+
+.exhibit {
+    opacity: 1;
+}
+
+.myskills,
+.inprogres,
+.projects,
+.about {
+    max-width: 1600px;
+    margin: 0 auto;
+}

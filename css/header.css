@@ -8,7 +8,7 @@ header {
     overflow: hidden;
 }
 
-header .title {
+.title {
     position: absolute;
     top: 52%;
     left: 50%;
@@ -17,7 +17,19 @@ header .title {
     text-align: center;
     letter-spacing: 1px;
     text-transform: uppercase;
+}
 
+.title p,
+.title h1,
+.logo {
+    opacity: 0;
+    animation: showTitle 2s 3.5s both;
+}
+
+@keyframes showTitle {
+    100% {
+        opacity: 1;
+    }
 }
 
 header p {
@@ -34,8 +46,8 @@ header h1 {
 
 .square {
     position: absolute;
-    height: 12vh;
-    width: 12vh;
+    height: 8vh;
+    width: 8vh;
     border: 2px solid #e4251c;
     border-radius: 50%;
     z-index: -1;
@@ -46,9 +58,8 @@ header h1 {
     left: -200vh;
     transform: translate(-50%, -50%) rotate(0deg);
     animation: entrySquareLeftTop 2s ease-out both,
-        /* CircleToSquare 1s 2s both, */
         increase 1s 2s ease-in both,
-        rotateSquareOne 1s 3.2s ease-in-out both, rotateInfiniteOne 10s 4.2s linear infinite;
+        rotateSquareOne 1s 3.1s ease-in-out both, rotateInfiniteOne 10s 4.1s linear infinite;
 }
 
 .two {
@@ -57,8 +68,8 @@ header h1 {
     transform: translate(50%, -50%) rotate(0deg);
     animation: entrySquareRightTop 2s ease-out both,
         increase 1s 2s ease-in both,
-        rotateSquareTwo 1s 3.2s ease-in-out both,
-        rotateInfiniteTwo 10s 4.2s linear infinite;
+        rotateSquareTwo 1s 3.1s ease-in-out both,
+        rotateInfiniteTwo 10s 4.1s linear infinite;
 }
 
 .three {
@@ -67,8 +78,8 @@ header h1 {
     transform: translate(50%, 50%) rotate(0deg);
     animation: entrySquareRightBottom 2s ease-out both,
         increase 1s 2s ease-in both,
-        rotateSquareThree 1s 3.2s ease-in-out both,
-        rotateInfiniteThree 10s 4.2s linear infinite;
+        rotateSquareThree 1s 3.1s ease-in-out both,
+        rotateInfiniteThree 10s 4.1s linear infinite;
 }
 
 .four {
@@ -77,8 +88,8 @@ header h1 {
     transform: translate(-50%, 50%) rotate(0deg);
     animation: entrySquareLeftBottom 2s ease-out both,
         increase 1s 2s ease-in both,
-        rotateSquareFour 1s 3.2s ease-in-out both,
-        rotateInfiniteFour 10s 4.2s linear infinite;
+        rotateSquareFour 1s 3.1s ease-in-out both,
+        rotateInfiniteFour 10s 4.1s linear infinite;
 }
 
 @keyframes entrySquareLeftTop {
@@ -115,7 +126,7 @@ header h1 {
 
 @keyframes increase {
     100% {
-        border-radius: 20%;
+        border-radius: 25%;
         height: 44vh;
         width: 44vh
     }
@@ -228,9 +239,9 @@ header h1 {
 
     @keyframes increase {
         100% {
-            border-radius: 20%;
-            height: 60vh;
-            width: 60vh
+            border-radius: 25%;
+            height: 55vh;
+            width: 55vh
         }
     }
 }
@@ -242,7 +253,6 @@ header h1 {
 
     header h1 {
         font-size: 2em;
-
     }
 
     header .title {

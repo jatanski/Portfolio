@@ -2,21 +2,29 @@
 
 .skills {
     background-color: #fff;
-    color: #111;
+    color: #800000;
     text-transform: uppercase;
     text-align: center;
 }
 
 .skills h2,
 .skills h3 {
-    padding: 8% 0 12%;
+    padding: 7% 0 10%;
     font-size: 2em;
+}
+
+.skills h3 {
+    padding: 4% 0 11%;
 }
 
 .icons {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+
+.second {
+    padding-bottom: 5%;
 }
 
 .icon {
@@ -29,6 +37,7 @@
 
 .icon i {
     font-size: 3em;
+    color: #8b0000;
 }
 
 .progres {
@@ -37,58 +46,59 @@
     margin-left: 5%;
     height: 4vh;
     width: 20vw;
-    border: 5px solid #222;
+    border: 5px solid #8b0000;
     overflow: hidden;
 }
 
-.progres::after {
-    content: "";
+.show-loading {
     position: absolute;
     left: -30vw;
     bottom: -5px;
     height: 4vh;
-    background-color: #222;
+    background-color: #8b0000;
     background-size: 4px;
-    animation: progresLoading 2s 2s both;
+    /* animation: progresLoading 2s 2s both; */
+    transition: 1s;
 }
 
-.fa-html5+.progres::after {
+.html5>.progres>.show-loading {
     width: calc(20vw * 4/5 - 5px);
 }
 
-.fa-css3-alt+.progres::after {
+.css3>.progres>.show-loading {
     width: calc(20vw * 7/10 - 5px);
 }
 
-.fa-js+.progres::after,
-.devicon-jquery-plain+.progres::after,
-.devicon-git-plain+.progres::after {
+.js>.progres>.show-loading,
+.jquery>.progres>.show-loading,
+.git>.progres>.show-loading {
     width: calc(20vw * 1/2 - 5px);
 }
 
-.devicon-bootstrap-plain+.progres::after {
+.bootstrap>.progres>.show-loading {
     width: calc(20vw * 2/3 - 5px);
 }
 
-.devicon-sass-original+.progres::after {
+.sass>.progres>.show-loading {
     width: calc(20vw * 55/100 - 5px);
 }
 
-.devicon-photoshop-plain+.progres::after {
+.photoshop>.progres>.show-loading {
     width: calc(20vw * 4/10 - 5px);
 }
 
-@keyframes progresLoading {
+/* @keyframes progresLoading {
     100% {
         left: -5px;
     }
-}
+} */
 
 .icon span {
     display: none;
     padding-left: 15px;
     font-size: 2em;
     font-weight: bold;
+    color: #800000;
 }
 
 @media (orientation: portrait) and (min-width: 400px) {
@@ -139,12 +149,43 @@
     }
 }
 
-@media (orientation: landscape) and (min-width: 1024px) {
+@media (orientation: landscape) and (min-width: 736px) {
 
     .skills h2,
     .skills h3 {
+        font-size: 2.7em;
+    }
+
+    .skills h2 {
+        padding: 8% 0 6%;
+    }
+
+    .skills h2,
+    .skills h3 {
+        padding: 4% 0 6%;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+
+    .myskills,
+    .inprogres {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .skills h2 {
+        padding: 5% 0 3%;
         font-size: 3em;
-        padding: 8% 0;
+    }
+
+    .skills h3 {
+        padding-bottom: 3%;
+        font-size: 3em;
+    }
+
+    .second {
+        padding-bottom: 0;
     }
 
     .icon {
@@ -172,15 +213,15 @@
 
     .skills h2,
     .skills h3 {
-        font-size: 4.6em;
-        padding: 7% 0;
+        font-size: 3.6em;
+        padding: 5% 0;
     }
 
     .icon i {
-        font-size: 5em;
+        font-size: 4.6em;
     }
 
     .icon span {
-        font-size: 2.8em;
+        font-size: 2.4em;
     }
 }

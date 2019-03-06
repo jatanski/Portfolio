@@ -1,9 +1,5 @@
 /* Kontakt i social media */
 
-.contact {
-    min-height: 60vh;
-}
-
 .contact h2 {
     padding: 8% 0 12%;
     font-size: 2em;
@@ -103,11 +99,18 @@ span.showNumber {
 }
 
 @media (orientation: landscape) and (min-width: 1024px) {
+    .contact {
+        margin: 0 auto;
+        width: 80%;
+    }
+
     .contact h2 {
+        padding: 2% 0 3%;
         font-size: 3em;
     }
 
     .socials {
+        padding-bottom: 12%;
         flex-wrap: nowrap;
     }
 
