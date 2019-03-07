@@ -131,6 +131,10 @@ span.showNumber {
     .social i {
         font-size: 4em;
     }
+
+    span {
+        font-size: 1.2em;
+    }
 }
 
 @media (orientation: landscape) and (min-width: 1400px) {

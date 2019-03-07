@@ -15,27 +15,27 @@ const skills = document.querySelector('.skills');
 
 const navButtons = [...document.querySelectorAll('.menuButton')];
 
-
 //Rozwijanie i zwijanie menu na mobile
 icoBurger.addEventListener('click', function () {
-    this.classList.add('show');
-    icoClose.classList.remove('show');
-    ulContainer.classList.remove('show');
+    this.classList.remove('show');
+    icoClose.classList.add('show');
+    ulContainer.classList.add('show');
+    ulContainer.classList.add('menuMobile');
 })
 
 icoClose.addEventListener('click', function () {
-    this.classList.add('show');
-    icoBurger.classList.remove('show');
-    ulContainer.classList.add('show');
+    this.classList.remove('show');
+    icoBurger.classList.add('show');
+    ulContainer.classList.remove('show');
 })
 
 //Automatyczne zamykanie się menu przy kliku w button
 navButtons.forEach(el => {
     el.addEventListener('click',
         function () {
-            icoBurger.classList.remove('show');
-            icoClose.classList.add('show');
-            ulContainer.classList.add('show');
+            icoBurger.classList.add('show');
+            icoClose.classList.remove('show');
+            ulContainer.classList.remove('show');
         })
 })
 

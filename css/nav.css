@@ -9,10 +9,11 @@
     background-image: url(../img/pseudologo.png);
     background-size: contain;
     background-repeat: no-repeat;
-    z-index: 1;
+    z-index: 2;
 }
 
-nav .ico {
+.ico {
+    display: none;
     position: fixed;
     top: 1vh;
     right: 3vh;
@@ -25,16 +26,16 @@ nav {
     background-color: #111;
 }
 
-.show {
-    display: none;
-}
-
 .ulContainer {
+    display: none;
     position: fixed;
-    height: 68vh;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.95);
     z-index: 1;
+}
+
+.show {
+    display: block;
 }
 
 .menuOpacity {
@@ -46,7 +47,7 @@ nav {
     position: absolute;
     left: -100vw;
     bottom: 0;
-    height: 0px;
+    height: 0;
     width: 100vw;
     background-color: red;
     animation: showLine 1s both;
@@ -58,12 +59,12 @@ nav {
     }
 }
 
-nav ul {
-    padding: 25% 0 10%;
+ul {
+    padding: 20% 0 10%;
     border-bottom: 2px solid red;
 }
 
-nav li {
+li {
     text-align: center;
 }
 
@@ -72,12 +73,11 @@ li a {
     width: 100%;
     line-height: calc(12vh * 0.8);
     text-decoration: none;
-    /* background-color: grey; */
     color: #fff;
     letter-spacing: 3px;
     font-size: 1.2em;
     text-transform: uppercase;
-    transition: .1s;
+
 }
 
 @media (orientation: portrait) and (min-width: 375px) {
@@ -135,6 +135,7 @@ li a {
     }
 
     .ulContainer {
+        display: block;
         position: fixed;
         height: 10vh;
         width: 100%;
