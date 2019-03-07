@@ -3,11 +3,14 @@ const icoClose = document.querySelector('.close');
 const mobileUl = document.querySelector('ul');
 const ulContainer = document.querySelector('.ulContainer');
 const header = document.querySelector('header');
-const about = document.querySelector('.about')
+const about = document.querySelector('.about');
+const image = document.querySelector('.image');
+const description = document.querySelector('.description')
 const phone = document.querySelector('.fa-mobile-alt');
 const phoneNumber = document.querySelector('.number');
 const mail = document.querySelector('.fa-envelope');
 const showMail = document.querySelector('.mail');
+const skills = document.querySelector('.skills')
 
 
 //Rozwijanie i zwijanie menu na mobile
@@ -25,15 +28,43 @@ icoClose.addEventListener('click', function () {
     header.style.minHeight = "90vh"
 })
 
+// window.addEventListener('scroll', function () {
+//     if (this.scrollY > ulContainer.offsetTop) {
+//         ulContainer.classList.toggle('fixed')
+//     }
+// })
+
+//Automatyczne zwijanie menu
+// window.addEventListener('scroll', function () {
+//     if (this.scrollY > ulContainer.offsetHeight) {
+//         icoClose.classList.add('show');
+//         icoBurger.classList.remove('show');
+//         mobileUl.classList.add('show');
+//         header.style.minHeight = "90vh"
+//     }
+// })
+
+//Ikonka menu zmienia kolor
+window.addEventListener('scroll', function () {
+    if (this.scrollY < header.offsetHeight - ulContainer.offsetHeight) {
+        icoBurger.style.color = "#fff"
+    } else if (this.scrollY > header.offsetHeight && this.scrollY < description.offsetTop) {
+        icoBurger.style.color = "#111"
+    } else if (this.scrollY > description.offsetTop && this.scrollY < skills.offsetTop) {
+        icoBurger.style.color = "#fff"
+    } else if (this.scrollY > skills.offsetTop && this.scrollY < skills.offsetTop + skills.offsetHeight) {
+        icoBurger.style.color = "#111"
+    } else {
+        icoBurger.style.color = "#fff"
+    }
+})
 
 //Przezroczystość menu
 window.addEventListener('scroll', function () {
-    // console.log(this.scrollY)
-    // console.log(header.offsetHeight)
-    if (this.scrollY > header.offsetHeight - ulContainer.offsetHeight) {
-        ulContainer.classList.add('menuOpacity');
-    } else {
+    if (this.scrollY < header.offsetHeight - ulContainer.offsetHeight) {
         ulContainer.classList.remove('menuOpacity');
+    } else if (this.scrollY > header.offsetHeight - ulContainer.offsetHeight) {
+        ulContainer.classList.add('menuOpacity');
     }
 })
 
