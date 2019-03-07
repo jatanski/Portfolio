@@ -10,39 +10,35 @@ const phone = document.querySelector('.fa-mobile-alt');
 const phoneNumber = document.querySelector('.number');
 const mail = document.querySelector('.fa-envelope');
 const showMail = document.querySelector('.mail');
-const skills = document.querySelector('.skills')
+const skills = document.querySelector('.skills');
+
+const navButtons = [...document.querySelectorAll('.menuButton')];
+
+
 
 
 //Rozwijanie i zwijanie menu na mobile
 icoBurger.addEventListener('click', function () {
     this.classList.add('show');
     icoClose.classList.remove('show');
-    mobileUl.classList.remove('show');
-    header.style.minHeight = "80vh"
+    ulContainer.classList.remove('show');
 })
 
 icoClose.addEventListener('click', function () {
     this.classList.add('show');
     icoBurger.classList.remove('show');
-    mobileUl.classList.add('show');
-    header.style.minHeight = "90vh"
+    ulContainer.classList.add('show');
 })
 
-// window.addEventListener('scroll', function () {
-//     if (this.scrollY > ulContainer.offsetTop) {
-//         ulContainer.classList.toggle('fixed')
-//     }
-// })
-
-//Automatyczne zwijanie menu
-// window.addEventListener('scroll', function () {
-//     if (this.scrollY > ulContainer.offsetHeight) {
-//         icoClose.classList.add('show');
-//         icoBurger.classList.remove('show');
-//         mobileUl.classList.add('show');
-//         header.style.minHeight = "90vh"
-//     }
-// })
+//Automatyczne zamykanie się menu przy kliku w button
+navButtons.forEach(el => {
+    el.addEventListener('click',
+        function () {
+            icoBurger.classList.remove('show');
+            icoClose.classList.add('show');
+            ulContainer.classList.add('show');
+        })
+})
 
 //Ikonka menu zmienia kolor
 window.addEventListener('scroll', function () {
@@ -83,11 +79,11 @@ $('a[href^="#"]').on('click', function (e) {
     let target = $(this.hash);
 
     $('html, body').animate({
-        'scrollTop': target.offset().top
+        'scrollTop': (target.offset().top - ulContainer.offsetHeight)
     }, 1000, 'swing');
 });
 
-//Animowane pokazywanie się i znikanie sekcji strony
+//Animowane pojawianie się sekcji strony
 $(document).ready(function () {
     $('*[data-animate]').addClass('hide').each(function () {
         $(this).viewportChecker({

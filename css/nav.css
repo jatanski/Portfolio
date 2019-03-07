@@ -18,7 +18,7 @@ nav .ico {
     right: 3vh;
     font-size: 2.4em;
     color: #eee;
-    z-index: 1;
+    z-index: 2;
 }
 
 nav {
@@ -27,6 +27,35 @@ nav {
 
 .show {
     display: none;
+}
+
+.ulContainer {
+    position: fixed;
+    height: 68vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 1;
+}
+
+.menuOpacity {
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.menuOpacity::after {
+    content: "";
+    position: absolute;
+    left: -100vw;
+    bottom: 0;
+    height: 0px;
+    width: 100vw;
+    background-color: red;
+    animation: showLine 1s both;
+}
+
+@keyframes showLine {
+    100% {
+        left: 0;
+    }
 }
 
 nav ul {
@@ -109,7 +138,12 @@ li a {
         position: fixed;
         height: 10vh;
         width: 100%;
+        background-color: rgba(0, 0, 0, 0);
         z-index: 1;
+    }
+
+    .menuOpacity {
+        background-color: rgba(0, 0, 0, 0.95) !important;
     }
 
     nav.desktop ul {
@@ -125,6 +159,10 @@ li a {
         border: none;
         z-index: 1;
         height: 11vh;
+    }
+
+    .menuOpacity::after {
+        height: 2px;
     }
 
     li {
@@ -151,28 +189,6 @@ li a {
 
     li a:hover::after {
         left: -3px;
-    }
-}
-
-.menuOpacity {
-    background-color: rgba(0, 0, 0, 0.95);
-    /* border-bottom: 1px solid red; */
-}
-
-.menuOpacity::after {
-    content: "";
-    position: absolute;
-    left: -100vw;
-    bottom: 0;
-    height: 2px;
-    width: 100vw;
-    background-color: red;
-    animation: showLine 1s both;
-}
-
-@keyframes showLine {
-    100% {
-        left: 0;
     }
 }
 
