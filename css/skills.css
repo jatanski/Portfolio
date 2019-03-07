@@ -217,6 +217,12 @@
         padding: 5% 0;
     }
 
+    .skills h3 {
+        padding: 0 0 5%;
+    }
+
+
+
     .icon i {
         font-size: 4.6em;
     }

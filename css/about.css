@@ -12,8 +12,9 @@ section.active {
 .image {
     min-height: 60vh;
     width: 100vw;
-    background-image: url(../img/Zdjęcie\ na\ strone.jpg);
+    background-image: url(../img/profilowe\ strona.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: top 20%;
 }
 
