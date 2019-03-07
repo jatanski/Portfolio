@@ -1,3 +1,4 @@
+//Pobranie potrzebnych elementów DOM
 const icoBurger = document.querySelector('.burger');
 const icoClose = document.querySelector('.close');
 const mobileUl = document.querySelector('ul');
@@ -13,8 +14,6 @@ const showMail = document.querySelector('.mail');
 const skills = document.querySelector('.skills');
 
 const navButtons = [...document.querySelectorAll('.menuButton')];
-
-
 
 
 //Rozwijanie i zwijanie menu na mobile
