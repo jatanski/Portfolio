@@ -5,7 +5,7 @@
     transition: .5s;
 }
 
-section.active {
+.active {
     display: none;
 }
 
@@ -21,19 +21,19 @@ section.active {
 .description {
     position: relative;
     left: 6vw;
-    text-align: center;
     width: 88vw;
-    color: #eee;
-    letter-spacing: 1px;
     padding-bottom: 10vh;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #eee;
 }
 
 .description h2,
 .description h3 {
     position: relative;
-    font-size: 2em;
     padding: 10vh 5% 0;
     text-transform: uppercase;
+    font-size: 2em;
 }
 
 .description h3 {
@@ -45,8 +45,8 @@ section.active {
     content: "";
     position: absolute;
     left: 50%;
-    transform: translate(-50%);
     bottom: -10%;
+    transform: translate(-50%);
     height: 2px;
     width: 100px;
     background-color: white;
@@ -74,8 +74,8 @@ section.active {
 
 @media (orientation: portrait) and (min-width: 768px) {
     .description h2 {
-        font-size: 2.6em;
         padding: 10vh 5% 0;
+        font-size: 2.6em;
     }
 
     .description h3 {
@@ -97,8 +97,8 @@ section.active {
     }
 
     .description {
-        width: 92%;
         left: 4vw;
+        width: 92%;
     }
 
     .description p {
@@ -129,8 +129,8 @@ section.active {
 
     .image {
         position: static;
-        background-position: center;
         width: 50%;
+        background-position: center;
     }
 
     .description {

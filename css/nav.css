@@ -22,10 +22,6 @@
     z-index: 2;
 }
 
-nav {
-    background-color: #111;
-}
-
 .ulContainer {
     display: none;
     position: fixed;
@@ -72,12 +68,11 @@ li a {
     height: 100%;
     width: 100%;
     line-height: calc(12vh * 0.8);
-    text-decoration: none;
-    color: #fff;
     letter-spacing: 3px;
     font-size: 1.2em;
     text-transform: uppercase;
-
+    text-decoration: none;
+    color: #fff;
 }
 
 @media (orientation: portrait) and (min-width: 375px) {
@@ -101,21 +96,21 @@ li a {
 }
 
 @media (orientation: landscape) {
-    nav ul {
+    ul {
         padding: 14% 0 6%;
     }
 
-    nav li {
+    li {
         padding: 1vh 0;
     }
 }
 
 @media (orientation: landscape) and (min-width: 640px) {
-    nav ul {
+    ul {
         padding: 12% 0 6%;
     }
 
-    nav .ico {
+    .ico {
         font-size: 2.8em;
     }
 
@@ -156,10 +151,10 @@ li a {
         right: 3vw;
         max-width: 80vw;
         min-width: 55vw;
+        height: 11vh;
         padding: 0 0 2vh;
         border: none;
         z-index: 1;
-        height: 11vh;
     }
 
     .menuOpacity::after {

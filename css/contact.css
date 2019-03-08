@@ -2,10 +2,10 @@
 
 .contact h2 {
     padding: 8% 0 12%;
-    font-size: 2em;
-    color: #eee;
     text-transform: uppercase;
     text-align: center;
+    font-size: 2em;
+    color: #eee;
 }
 
 .socials {
@@ -16,9 +16,9 @@
 
 .social {
     position: relative;
+    flex-basis: 33%;
     padding: 6vw 0;
     text-align: center;
-    flex-basis: 33%;
 }
 
 .social i {
@@ -38,14 +38,13 @@
 }
 
 span.showNumber {
+    display: block;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    display: block;
     opacity: 0;
     animation: showNumber 1s both;
 }
-
 
 @keyframes showNumber {
     100% {
@@ -91,7 +90,6 @@ span.showNumber {
 }
 
 @media (orientation: landscape) {
-
     .contact h2 {
         padding: 8% 0;
         font-size: 2.4em
@@ -114,8 +112,8 @@ span.showNumber {
 
 @media (orientation: landscape) and (min-width: 1024px) {
     .contact {
-        margin: 0 auto;
         width: 80%;
+        margin: 0 auto;
     }
 
     .contact h2 {
@@ -124,8 +122,8 @@ span.showNumber {
     }
 
     .socials {
-        padding-bottom: 10%;
         flex-wrap: nowrap;
+        padding-bottom: 10%;
     }
 
     .social i {

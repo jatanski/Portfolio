@@ -2,9 +2,9 @@
 
 .skills {
     background-color: #fff;
-    color: #800000;
-    text-transform: uppercase;
     text-align: center;
+    text-transform: uppercase;
+    color: #800000;
 }
 
 .skills h2,
@@ -28,11 +28,11 @@
 }
 
 .icon {
-    min-width: calc(100% / 3);
-    padding-bottom: 10vh;
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    min-width: calc(100% / 3);
+    padding-bottom: 10vh;
 }
 
 .icon i {
@@ -43,9 +43,9 @@
 .progres {
     display: none;
     position: relative;
-    margin-left: 5%;
     height: 4vh;
     width: 20vw;
+    margin-left: 5%;
     border: 5px solid #8b0000;
     overflow: hidden;
 }
@@ -57,7 +57,6 @@
     height: 4vh;
     background-color: #8b0000;
     background-size: 4px;
-    /* animation: progresLoading 2s 2s both; */
     transition: 1s;
 }
 
@@ -86,12 +85,6 @@
 .photoshop>.progres>.show-loading {
     width: calc(20vw * 4/10 - 5px);
 }
-
-/* @keyframes progresLoading {
-    100% {
-        left: -5px;
-    }
-} */
 
 .icon span {
     display: none;
@@ -220,8 +213,6 @@
     .skills h3 {
         padding: 0 0 5%;
     }
-
-
 
     .icon i {
         font-size: 4.6em;
