@@ -95,7 +95,7 @@ const progresSpan = () => {
 window.addEventListener('scroll', function dzikus() {
     console.log(this.scrollY, skills.offsetTop, skills.offsetHeight)
     if (this.scrollY > skills.offsetHeight) {
-        setInterval(progresSpan, 10);
+        setInterval(progresSpan, 15);
         window.removeEventListener('scroll', dzikus)
     }
 })
