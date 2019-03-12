@@ -63,15 +63,6 @@ window.addEventListener('scroll', function () {
     }
 })
 
-// Pokazuje się numer telefonu i adres e-mail
-phone.addEventListener('click', function () {
-    phoneNumber.classList.toggle('showNumber');
-})
-
-mail.addEventListener('click', function () {
-    showMail.classList.toggle('showNumber');
-})
-
 //Scrollowanie do odpowiedniej sekcji
 $('a[href^="#"]').on('click', function (e) {
     e.preventDefault();
@@ -81,6 +72,33 @@ $('a[href^="#"]').on('click', function (e) {
         'scrollTop': (target.offset().top - ulContainer.offsetHeight)
     }, 1000, 'swing');
 });
+
+//ładowanie się procentów umiejętności
+let percentObiekt = {
+    percentMinNumber: [],
+    percentMaxNumber: []
+};
+const progresSpan = () => {
+    const percentSpan = document.querySelectorAll('.percent-progres');
+    percentSpan.forEach(el => {
+        percentObiekt.percentMinNumber[percentObiekt.percentMinNumber.length] = 0;
+        percentObiekt.percentMaxNumber[percentObiekt.percentMaxNumber.length] = el.dataset.number;
+    })
+    percentSpan.forEach((el, i) => {
+        el.textContent = `${percentObiekt.percentMinNumber[i]}%`;
+        if (percentObiekt.percentMinNumber[i] < percentObiekt.percentMaxNumber[i]) {
+            percentObiekt.percentMinNumber[i]++;
+        }
+    })
+}
+
+window.addEventListener('scroll', function dzikus() {
+    console.log(this.scrollY, skills.offsetTop, skills.offsetHeight)
+    if (this.scrollY > skills.offsetHeight) {
+        setInterval(progresSpan, 10);
+        window.removeEventListener('scroll', dzikus)
+    }
+})
 
 //Animowane pojawianie się sekcji strony
 $(document).ready(function () {
@@ -95,11 +113,19 @@ $(document).ready(function () {
 
 // ładowanie się pasków z postępem
 const showLoading = [...document.querySelectorAll('.show-loading')]
-
 window.addEventListener('scroll', function () {
     if (this.scrollY > skills.offsetHeight) {
         showLoading.forEach(el => {
             el.style.left = "-5px";
         })
     }
+})
+
+// Pokazuje się numer telefonu i adres e-mail
+phone.addEventListener('click', function () {
+    phoneNumber.classList.toggle('showNumber');
+})
+
+mail.addEventListener('click', function () {
+    showMail.classList.toggle('showNumber');
 })

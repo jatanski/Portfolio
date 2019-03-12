@@ -2,10 +2,10 @@
 
 .logo {
     position: absolute;
-    top: 3vh;
+    top: 1vh;
     left: 3%;
     width: 30vh;
-    height: 5.5vh;
+    height: 7vh;
     background-image: url(../img/pseudologo.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -86,6 +86,12 @@ li a {
 }
 
 @media (orientation: portrait) and (min-width: 768px) {
+    .logo {
+        top: 1.5vh;
+        width: 30vh;
+        height: 12vh;
+    }
+
     nav .ico {
         font-size: 4.5em;
     }
@@ -96,6 +102,11 @@ li a {
 }
 
 @media (orientation: landscape) {
+    .logo {
+        width: 45vh;
+        height: 12vh;
+    }
+
     ul {
         padding: 14% 0 6%;
     }
@@ -127,6 +138,12 @@ li a {
 
     .ico {
         display: none;
+    }
+
+    .logo {
+        top: 2.5vh;
+        width: 20vh;
+        height: 12vh;
     }
 
     .ulContainer {
@@ -192,5 +209,11 @@ li a {
     nav.desktop ul {
         max-width: 45vw;
         min-width: 45vw;
+    }
+
+    .logo {
+        top: 2.5vh;
+        width: 30vh;
+        height: 12vh;
     }
 }

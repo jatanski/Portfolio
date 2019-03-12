@@ -57,6 +57,7 @@
     background-size: 110%;
     background-repeat: no-repeat;
     background-position: center;
+    border-radius: 5% 5% 0 0;
 }
 
 .calc .photo {
@@ -74,6 +75,7 @@
 .short-description {
     height: 15vh;
     background-color: #7A0308;
+    border-radius: 0 0% 5% 5%;
 }
 
 .calc i,
@@ -201,7 +203,7 @@
     }
 }
 
-@media (orientation: landscape) and (min-width: 640px) {
+@media (orientation: landscape) and (min-width: 736px) {
     .portfolio h2 {
         font-size: 3.2em;
     }
@@ -240,13 +242,14 @@
         height: 33vh;
         width: 44%;
         padding-bottom: 0;
-        box-shadow: 0 0 2px 5px #7A0308;
+        /* box-shadow: 0 0 2px 5px #7A0308; */
     }
 
     .photo {
         width: 22vw;
         height: 33vh;
         background-size: contain;
+        border-radius: 8% 0 0 8%;
     }
 
     .portfolio i {
@@ -261,6 +264,7 @@
         height: 100%;
         width: 22vw;
         letter-spacing: 1px;
+        border-radius: 0 8% 8% 0;
     }
 
     .portfolio h3 {
