@@ -2,6 +2,7 @@
 
 .about {
     min-height: 80vh;
+    cursor: default;
     transition: .5s;
 }
 

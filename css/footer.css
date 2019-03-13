@@ -1,15 +1,16 @@
 footer {
-    padding: 4% 0;
+    padding: 3%;
     border-top: 1px solid #eee;
     background-color: #333;
     text-align: center;
     letter-spacing: 1px;
     color: #eee;
+    cursor: default;
 }
 
 @media (min-width: 360px) {
     footer p {
-        font-size: 1.1em;
+        font-size: 1em;
     }
 }
 
@@ -22,6 +23,12 @@ footer {
 @media (min-width: 768px) {
     footer p {
         font-size: 1.6em;
+    }
+}
+
+@media (orientation: landscape) {
+    footer {
+        padding: 2%;
     }
 }
 
