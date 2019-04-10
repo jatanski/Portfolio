@@ -1,4 +1,4 @@
-footer {
+.footer {
     padding: 3%;
     border-top: 1px solid #eee;
     background-color: #333;
@@ -9,35 +9,35 @@ footer {
 }
 
 @media (min-width: 360px) {
-    footer p {
+    .footer p {
         font-size: 1em;
     }
 }
 
 @media (min-width: 736px) {
-    footer p {
+    .footer p {
         font-size: 1.4em;
     }
 }
 
 @media (min-width: 768px) {
-    footer p {
+    .footer p {
         font-size: 1.6em;
     }
 }
 
 @media (orientation: landscape) {
-    footer {
+    .footer {
         padding: 2%;
     }
 }
 
 @media (min-width: 1024px) {
-    footer {
+    .footer {
         padding: 1.5%;
     }
 
-    footer p {
+    .footer p {
         font-size: 1.2em;
     }
 }
